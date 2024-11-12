@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:30:12 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 17:01:06 by dvlachos         ###   ########.fr       */
+/*   Created: 2024/11/07 14:55:34 by dvlachos          #+#    #+#             */
+/*   Updated: 2024/11/10 17:09:44 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+/*
+static char	f(unsigned int n, char c)
 {
-	char	s;
+	char	str;
+	str = c - 3;
+	return (str);
+}
+*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*str;
 
-	if (n == -2147483648)
+	str = malloc(ft_strlen(s) + 1);
+	if (!str || !s || !f)
+		return (NULL);
+	i = 0;
+	while (str[i])
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n = -n;
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-	}
-	s = '0' + n % 10;
-	write(fd, &s, 1);
+	str[i] = 0;
+	return (str);
 }
 /*
 int	main()
 {
-	ft_putnbr_fd(214748364, 1);
+	char	str1[] = "khoorrrr#zruog";
+	char	*str2;
+	str2 = ft_strmapi(str1, *f);
+	printf("%s\n", str2);
 	return 0;
 }
 */

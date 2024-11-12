@@ -6,16 +6,16 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:40:02 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/06 18:29:42 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:10:12 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-int	digit_count(int n)
+
+static int	digit_count(int n)
 {
 	int	count;
-	
+
 	count = 0;
 	if (n == 0)
 		return (1);
@@ -31,7 +31,7 @@ int	digit_count(int n)
 	}
 	return (count);
 }
-*/
+
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -58,8 +58,8 @@ char	*ft_itoa(int n)
 /*
 int	main()
 {
-	printf("%d\n", digit_count(-102838));
-	printf("%s\n", ft_itoa(-102838));
+	printf("%d\n", digit_count(01));
+	printf("%s\n", ft_itoa(01));
 	return 0;
 }
 */

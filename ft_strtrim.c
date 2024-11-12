@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:50:01 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/06 14:46:02 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:38:51 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trim, &s1[i], j - i + 1);
 	return (trim);
 }
-
+/*
 int	main()
 {
 	char	str[30] = "iiiiiiiiiiiiiii";
@@ -40,3 +40,4 @@ int	main()
 	printf("%s\n", ft_strtrim(str, "i"));
 	return 0;
 }
+*/

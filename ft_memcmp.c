@@ -6,26 +6,25 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:28:59 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/10/31 16:52:55 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:37:48 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
-	char		*st1;
-	char		*st2;
+	size_t			i;
+	unsigned char	*st1;
+	unsigned char	*st2;
 
-	st1 = (char *) s1;
-	st2 = (char *) s2;
+	st1 = (unsigned char *) s1;
+	st2 = (unsigned char *) s2;
 	i = 0;
 	while (n > i)
 	{
-		if ((char) st1[i] != (char) st2[i])
-			return ((char) st1[i] - (char) st2[i]);
+		if (st1[i] != st2[i])
+			return (st1[i] - st2[i]);
 		i++;
 	}
 	return (0);
@@ -33,11 +32,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 int	main()
 {
-	char	str1[] = "moderat";
-	char	str2[] = "moderai";
+	char	str1[] = "ABCD";
+	char	str2[] = "ABC";
 
-	printf("%d\n", memcmp(str1, str2, 10));
-	printf("%d\n", ft_memcmp(str1, str2, 10));
+	printf("%d\n", memcmp(str1, str2, 4));
+	printf("%d\n", ft_memcmp(str1, str2, 4));
 	return 0;
 }
 */

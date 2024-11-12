@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:16:15 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/06 14:33:01 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:38:58 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = 0;
-	sub = malloc(len);
+	sub = malloc(len + 1);
 	if (sub == NULL)
 		return (NULL);
-	while (len--)
+	if (len > ft_strlen(s) || len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	while (len-- && *s)
 		sub[i++] = s[start++];
+	sub[i] = 0;
 	return (sub);
 }
 /*
 int	main()
 {
 	char	*str = "november rain";
+	int	size;
 
-	printf("%s\n", ft_substr(str, 0, 4));
+	printf("%s\n", ft_substr(str, 5, 10));
 	return 0;
 }
 */

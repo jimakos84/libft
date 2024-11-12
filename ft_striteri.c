@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:30:12 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 17:01:06 by dvlachos         ###   ########.fr       */
+/*   Created: 2024/11/10 12:59:39 by dvlachos          #+#    #+#             */
+/*   Updated: 2024/11/10 14:12:11 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+/*
+void	char_with_index(unsigned int n, char *s)
 {
-	char	s;
+	printf("Index %u: %c\n", n, *s);
+}
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
 
-	if (n == -2147483648)
+	i = 0;
+	while (s[i])
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		f(i, s + i);
+		i++;
 	}
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n = -n;
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-	}
-	s = '0' + n % 10;
-	write(fd, &s, 1);
 }
 /*
 int	main()
 {
-	ft_putnbr_fd(214748364, 1);
+	char	str1[] = "another day, another beer";
+
+	ft_striteri(str1, char_with_index);
 	return 0;
 }
 */

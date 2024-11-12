@@ -6,12 +6,11 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:07:40 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/10/31 16:51:23 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:22:57 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
