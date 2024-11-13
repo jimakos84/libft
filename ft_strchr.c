@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:22:31 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/12 18:28:43 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:38:21 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0' + 1)
+	while (*s)
 	{
-		if (c == s[i])
-			return ((char *) &s[i]);
-		i++;
+		if ((char)c == *s)
+			return ((char *) s);
+		s++;
 	}
-	return((char *) s);
+	if (c == '\0')
+		return ((char *) s);
+	return (NULL);
 }
+
 /*
 int	main()
 {
-	printf("%s\n", strchr("pipo pa pipo", 0));
-	printf("%s\n", ft_strchr("pipo pa pipo", 0));
+	printf("%s\n", strchr("pipo pa pipo",'\0' ));
+	printf("%s\n", ft_strchr("pipo pa pipo", '\0'));
 	return 0;
 }
 */

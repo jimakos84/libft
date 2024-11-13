@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:55:34 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 17:09:44 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:32:20 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 /*
 static char	f(unsigned int n, char c)
 {
+	(void) n;
 	char	str;
-	str = c - 3;
+	
+	str = c;
+	if (c >= 'a' && c <= 'z')
+		str -= 32;
+	else if (c >= 'A' && c <= 'Z')
+		str += 32;
 	return (str);
 }
 */
@@ -24,13 +30,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	str = malloc(ft_strlen(s) + 1);
-	if (!str || !s || !f)
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
-	while (str[i])
+	while (i < ft_strlen(s))
 	{
-		str[i] = f(i, s[i]);
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
 	str[i] = 0;
@@ -39,7 +45,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*
 int	main()
 {
-	char	str1[] = "khoorrrr#zruog";
+	char	str1[] = "HeLlO WoRlD";
 	char	*str2;
 	str2 = ft_strmapi(str1, *f);
 	printf("%s\n", str2);

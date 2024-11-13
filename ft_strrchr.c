@@ -6,34 +6,37 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:56:28 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/10/31 12:07:12 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:36:58 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
-	i = sizeof((char *)s);
-	while (s[i])
+	i = ft_strlen(s);
+	if (s[i] == (char) c)
+		return ((char *) &s[i]);
+	while (i > 0)
 	{
-		if ((char) c == s[i])
-			return ((char *) &s[i]);
+		if (s[i - 1] == (char) c)
+		{
+			return ((char *) &s[i - 1]);
+		}
 		i--;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int	main()
 {
-	char	*str = "ululululul";
+	char	*str = "";
 
-	printf("%s\n", strchr(str, 'u'));
-	printf("%s\n", strrchr(str, 'u'));
-	printf("%s\n", ft_strrchr(str, 'u'));
+	printf("%s\n", strchr(str, '\0'));
+	printf("%s\n", strrchr(str, '\0'));
+	printf("%s\n", ft_strrchr(str, '\0'));
 	return 0;
 }
 */

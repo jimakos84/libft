@@ -6,11 +6,12 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:03:38 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 15:23:19 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:45:14 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <bsd/string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -19,23 +20,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!little[j])
+	if (little[0] == 0)
 		return ((char *) big);
-	while (len--)
+	while (i < len && big[i])
 	{
-		while (little[j] == big[i])
-		{
+		while (big[i + j] == little[j] && big [i + j] && i + j < len)
 			j++;
-			i++;
-		}
-		if (!little[j])
+		if (little[j] == '\0')
 		{
-			return ((char *) &big[i - j]);
+			return ((char *) big + i);
 		}
-		j = 0;
 		i++;
+		j = 0;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int	main()
@@ -43,8 +41,8 @@ int	main()
 	const char	*bigString = "ela re paidako paidaki mou ti kaneis";
 	const char	*littleString = "aki";
 	
-	printf("%s\n", ft_strnstr(bigString, littleString, 30));
-	printf("%s\n", strnstr(bigString, littleString, 30));
+	printf("%s\n", ft_strnstr(bigString, littleString, 20));
+	printf("%s\n", strnstr(bigString, littleString, 20));
 	return 0;
 }
 */

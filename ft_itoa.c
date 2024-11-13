@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:40:02 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 17:10:12 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:16:00 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,31 +35,37 @@ static int	digit_count(int n)
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		i;
+	int		digits;
+	int		nb;
 
-	i = digit_count(n) - 1;
-	result = malloc(digit_count(n) + 1);
-	if (!result)
-		return (NULL);
+	nb = n;
 	if (n == -2147483648)
-		result = "-2147483648";
+		return (ft_strdup("-2147483648"));
+	digits = digit_count(n);
+	result = malloc(digits + 1);
+	if (result == NULL)
+		return (NULL);
+	result[digits] = '\0';
+	if (n == 0)
+		result[0] = '0';
 	if (n < 0)
 	{
 		result[0] = '-';
-		n = -n;
+		nb = -nb;
 	}
-	while (n != 0)
+	while (nb > 0)
 	{
-		result[i--] = '0' + n % 10;
-		n /= 10;
+		result[--digits] = '0' + nb % 10;
+		nb = nb / 10;
 	}
 	return (result);
 }
 /*
 int	main()
 {
-	printf("%d\n", digit_count(01));
-	printf("%s\n", ft_itoa(01));
+	printf("%d\n", digit_count(2104182306));
+	printf("%s\n", ft_itoa(2104182306));
+
 	return 0;
 }
 */
