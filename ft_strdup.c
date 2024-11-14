@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:05:35 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/07 17:59:06 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:45:57 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(char *src)
 {
 	char	*dup;
-	int		i;
+	size_t	i;
 
 	i = ft_strlen(src);
 	dup = (char *)malloc(i * sizeof(char) + 1);
@@ -24,10 +24,3 @@ char	*ft_strdup(char *src)
 	*dup = 0;
 	return (dup - i);
 }
-/*
-int	main()
-{
-	printf("%s", ft_strdup("nefeli"));
-	return 0;
-}
-*/

@@ -6,34 +6,31 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:02:11 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/13 19:01:03 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:45:12 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (src[i] && size > 1)
+	i = ft_strlen(src);
+	if (i + 1 < size)
+		ft_memcpy(dst, src, i + 1);
+	else if (size != 0)
 	{
-		dst[i] = src[i];
-		i++;
-		size--;
+		ft_memcpy(dst, src, size - 1);
+		dst[size - 1] = '\0';
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	return (i);
 }
 /*
 int	main()
 {
-	char	str[50] = "another day in paradise";
-	char	dest[10];
+	char	str[] = "another day in paradise";
+	char	dest[24];
 
 	ft_strlcpy(dest, str, sizeof(dest));
 	printf("%s\n", dest);

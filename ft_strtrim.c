@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:50:01 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/07 16:38:51 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:34:11 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,31 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
+	int		start;
+	int		end;
 	int		i;
-	int		j;
 
-	j = ft_strlen((char *)s1) - 1;
-	i = 0;
-	while (ft_strchr(set, s1[i]) && i <= j)
-		i++;
-	if (i > j)
-		return (ft_strdup((char *)s1 + j + 1));
-	while (ft_strchr(set, s1[j]) && j >= 0)
-		j--;
-	trim = malloc(j - i + 2);
+	end = ft_strlen(s1) - 1;
+	start = 0;
+	while (ft_strchr(set, s1[start]))
+		start++;
+	while (ft_strchr(set, s1[end]))
+		end--;
+	trim = malloc(end - start + 2);
 	if (!trim)
 		return (NULL);
-	ft_strlcpy(trim, &s1[i], j - i + 1);
+	i = 0;
+	while (start <= end)
+		trim[i++] = s1[start++];
+	trim[i] = '\0';
 	return (trim);
 }
 /*
 int	main()
 {
-	char	str[30] = "iiiiiiiiiiiiiii";
+	char	str[] = "lorem ipsum dolor sit amet";
 
-	printf("%s\n", ft_strtrim(str, "i"));
+	printf("%s\n", ft_strtrim(str, "met"));
 	return 0;
 }
 */
