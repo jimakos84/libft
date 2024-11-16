@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:04:59 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 10:12:23 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:36:52 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*join;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	join = malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
 	if (join == NULL)
 		return (NULL);

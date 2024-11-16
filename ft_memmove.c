@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:13:28 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:43:08 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/16 18:36:21 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (char *)src;
+	if (!src && !dest)
+		return (NULL);
 	if (dest <= src)
 	{
 		while (n--)
-		{
 			*d++ = *s++;
-		}
+		
 	}
 	else if (dest > src)
 	{
 		d += n - 1;
 		s += n - 1;
 		while (n--)
-		{
 			*d-- = *s--;
-		}
 	}
 	if (!dest && !src)
 		return (0);

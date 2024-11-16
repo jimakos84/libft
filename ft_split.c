@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:44:51 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 15:16:18 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:19:00 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,18 @@ static int	wordcount(const char *str, char c)
 	}
 	return (count);
 }
+
+/*
+char	ft_free2d(char	**arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+}
+*/
 
 char	**ft_split(char const *s, char c)
 {

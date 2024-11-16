@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:50:01 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:34:11 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/16 19:56:22 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		i;
 
+	if (!s1 && !set)
+		return (NULL);
 	end = ft_strlen(s1) - 1;
 	start = 0;
 	while (ft_strchr(set, s1[start]))
