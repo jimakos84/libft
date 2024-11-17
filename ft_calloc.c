@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:08:56 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 18:53:31 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:11:01 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*c;
+	size_t	i;
 
-	if (SIZE_MAX / nmemb < size)
+	i = 0;
+	if (size && (((nmemb * size) / size) != nmemb))
 		return (NULL);
-	if (nmemb == 0 || size == 0)
-	{
-		return (0);
-	}
 	else
 	{
 		c = malloc(nmemb * size);

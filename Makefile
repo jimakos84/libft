@@ -6,7 +6,7 @@
 #    By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 14:39:15 by dvlachos          #+#    #+#              #
-#    Updated: 2024/11/16 18:29:03 by dvlachos         ###   ########.fr        #
+#    Updated: 2024/11/17 14:40:40 by dvlachos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) -r $@ $?
 
-
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
@@ -43,4 +42,4 @@ re: fclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) 
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

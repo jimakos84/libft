@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:44:51 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 17:19:00 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:59:21 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	array = (char **)malloc((wordcount(s, c) + 1) * sizeof(char *));
-	if (!array)
+	if (!array || !s)
 		return (NULL);
 	i = 0;
 	while (*s)

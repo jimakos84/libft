@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 18:43:43 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 18:37:19 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/17 13:09:08 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (!dest && !src)
-		return (NULL);
 	char	*d;
 	char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	s = (char *)src;
 	d = (char *)dest;
 	while (n--)

@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:03:42 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 20:29:15 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/17 13:36:28 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	l_src = ft_strlen(src);
 	l_dst = ft_strlen(dst);
-	if (size == 0 && (!dst || !src))
+	if (dst == NULL || src == NULL)
 		return (0);
 	if (size <= l_dst)
 		return (l_src + size);
