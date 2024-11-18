@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:16:15 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 19:00:49 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:36:56 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = 0;
 	return (sub);
 }
-/*
-int	main()
-{
-	char	*str = "november rain";
-	int	size;
-
-	printf("%s\n", ft_substr(str, 5, 10));
-	return 0;
-}
-*/

@@ -6,7 +6,7 @@
 #    By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 14:39:15 by dvlachos          #+#    #+#              #
-#    Updated: 2024/11/17 14:40:40 by dvlachos         ###   ########.fr        #
+#    Updated: 2024/11/18 13:22:59 by dvlachos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)

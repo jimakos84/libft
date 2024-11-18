@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:40:02 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:43:02 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:28:53 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-/*
-int	main()
-{
-	printf("%d\n", digit_count(2104182306));
-	printf("%s\n", ft_itoa(2104182306));
-
-	return 0;
-}
-*/

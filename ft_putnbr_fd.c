@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:30:12 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:43:14 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:29:34 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 	s = '0' + n % 10;
 	write(fd, &s, 1);
 }
-/*
-int	main()
-{
-	ft_putnbr_fd(214748364, 1);
-	return 0;
-}
-*/

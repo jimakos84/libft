@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:28:59 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/07 16:37:48 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:33:14 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	char	str1[] = "ABCD";
-	char	str2[] = "ABC";
-
-	printf("%d\n", memcmp(str1, str2, 4));
-	printf("%d\n", ft_memcmp(str1, str2, 4));
-	return 0;
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:13:28 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/17 13:18:59 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:29:21 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (0);
 	return (dest);
 }
-/*
-int	main()
-{
-	int	arr[] = {1, 2, 3, 4, 5};
-	int	arrdest[] = {6, 7, 8, 9, 0};
-	char	str[50] = "tonight the music sings sings";
-	char	*dest;
-	
-	dest = str;
-
-	printf("%s\n", str);
-	memmove(dest + 2, str, 10);
-	printf("%s\n", dest);
-	ft_memmove(dest + 2, str, 10);
-	printf("%s\n", dest);
-	printf("%d\n", arr[0]);
-//	ft_memmove(arrdest, arr, sizeof(arr));
-//	memmove(arrdest, arr, sizeof(arr));
-	printf("%d\n", arrdest[3]);
-	return 0;
-}
-*/

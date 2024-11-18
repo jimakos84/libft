@@ -6,17 +6,12 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:59:39 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/17 13:37:08 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:32:02 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	char_with_index(unsigned int n, char *s)
-{
-	printf("Index %u: %c\n", n, *s);
-}
-*/
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -30,12 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-int	main()
-{
-	char	str1[] = "another day, another beer";
-
-	ft_striteri(str1, char_with_index);
-	return 0;
-}
-*/

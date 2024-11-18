@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:54:00 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/17 14:41:13 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:31:24 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,3 @@ void	*ft_memset(void *str, int c, size_t n)
 		*p++ = c;
 	return (str);
 }
-/*
-int	main()
-{
-	char	str[] = "lalalalalalal";
-	
-	printf("%s\n", str);
-	memset(str, '6', 5);
-	printf("%s\n", str);
-	ft_memset(str, '6', 5);
-	printf("%s\n", str);
-	return 0;
-
-}
-*/

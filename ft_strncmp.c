@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:07:40 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/13 14:28:15 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:36:45 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	char	str1[] = "tests\200";
-	char	str2[] = "tests\0";
-	
-	printf("%d\n", strncmp(str1, str2, 6));
-	printf("%d\n", ft_strncmp(str1, str2, 6));
-	return 0;
-}
-*/

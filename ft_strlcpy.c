@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:02:11 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:45:12 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:29:58 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (i);
 }
-/*
-int	main()
-{
-	char	str[] = "another day in paradise";
-	char	dest[24];
-
-	ft_strlcpy(dest, str, sizeof(dest));
-	printf("%s\n", dest);
-	strlcpy(dest, str, sizeof(dest));
-	printf("%s\n", dest);
-	printf("%zu\n", strlcpy(dest, str, sizeof(str)));
-	printf("%zu\n", ft_strlcpy(dest, str, sizeof(str)));
-	return 0;
-}
-*/

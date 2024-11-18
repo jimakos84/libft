@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:56:28 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/13 11:36:58 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:32:22 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	char	*str = "";
-
-	printf("%s\n", strchr(str, '\0'));
-	printf("%s\n", strrchr(str, '\0'));
-	printf("%s\n", ft_strrchr(str, '\0'));
-	return 0;
-}
-*/

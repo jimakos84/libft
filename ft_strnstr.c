@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:03:38 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:45:39 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:30:20 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	const char	*bigString = "ela re paidako paidaki mou ti kaneis";
-	const char	*littleString = "aki";
-	
-	printf("%s\n", ft_strnstr(bigString, littleString, 20));
-	printf("%s\n", strnstr(bigString, littleString, 20));
-	return 0;
-}
-*/

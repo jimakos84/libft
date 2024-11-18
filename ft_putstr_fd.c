@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:16:31 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/17 13:26:29 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:31:40 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, &*s, ft_strlen(s));
 }
-
-/*
-
-int	main()
-{
-	ft_putstr_fd("the taste of tea", 1);
-	return 0;
-}
-*/

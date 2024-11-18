@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:15:51 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 15:30:31 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:28:27 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-/*
-int	main()
-{
-	char	*str = "9999999999999999999";
-
-	printf("%d\n", atoi(str));
-	printf("%d\n", ft_atoi(str));
-	return 0;
-}
-*/

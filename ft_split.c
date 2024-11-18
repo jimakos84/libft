@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:44:51 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/17 14:59:21 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:33:56 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,6 @@ static int	wordcount(const char *str, char c)
 	}
 	return (count);
 }
-
-/*
-char	ft_free2d(char	**arr)
-{
-	int	i;
-
-	i = 0;
-	while (arr[i])
-		free(arr[i++]);
-	free(arr);
-}
-*/
 
 char	**ft_split(char const *s, char c)
 {
@@ -70,18 +58,3 @@ char	**ft_split(char const *s, char c)
 	array[i] = NULL;
 	return (array);
 }
-/*
-int	main()
-{
-	char	c = '.';
-	char	*str = "..ena.dyo.tria.tessera.pente";
-	char	**array;
-	int	i;
-
-	array = ft_split(str, c);
-	i = 0;
-	while (i < wordcount(str, c))
-		printf("%s\n", array[i++]);
-	return 0;
-}
-*/
