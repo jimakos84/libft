@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:07:24 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/18 13:33:26 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:47:33 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

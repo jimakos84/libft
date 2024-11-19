@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:46:43 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:46:07 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:42:48 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

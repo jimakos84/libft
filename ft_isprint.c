@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:35:28 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:44:31 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:48:16 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

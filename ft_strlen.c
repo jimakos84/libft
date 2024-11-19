@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:53 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/10 15:38:33 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:43:28 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:59:39 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/18 13:32:02 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:44:00 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

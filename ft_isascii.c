@@ -6,11 +6,9 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 10:41:43 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/14 12:43:56 by dvlachos         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:48:27 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {
