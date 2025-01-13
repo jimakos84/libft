@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   prchar.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:07:24 by dvlachos          #+#    #+#             */
-/*   Updated: 2025/01/10 13:08:54 by dvlachos         ###   ########.fr       */
+/*   Created: 2024/11/21 15:12:59 by dvlachos          #+#    #+#             */
+/*   Updated: 2025/01/13 11:54:49 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+int	prchar(int c)
 {
-	write(fd, &c, 1);
+	int	i;
+
+	i = write(1, &c, 1);
+	if (i == -1)
+		return (-1);
+	return (1);
 }

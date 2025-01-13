@@ -6,9 +6,11 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:22:31 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/18 18:46:36 by dvlachos         ###   ########.fr       */
+/*   Updated: 2025/01/10 13:09:22 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 char	*ft_strchr(const char *s, int c)
 {

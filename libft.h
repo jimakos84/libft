@@ -6,7 +6,7 @@
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:43:09 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/16 17:26:02 by dvlachos         ###   ########.fr       */
+/*   Updated: 2025/01/13 11:54:00 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdint.h>
+# include <stdint.h>
+# include <stdarg.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -52,5 +54,12 @@ void	ft_putchar_fd(char c, int fd);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_printf(const char *c, ...);
+int		prstr(char *str);
+int		prpointer(void *poi);
+int		prnum(int n);
+int		prhex(uintptr_t num, char x);
+int		prchar(int c);
+int		prunsint(unsigned int n);
 
 #endif

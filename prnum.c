@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   prnum.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvlachos <dvlachos@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 16:40:02 by dvlachos          #+#    #+#             */
-/*   Updated: 2024/11/25 19:14:37 by dvlachos         ###   ########.fr       */
+/*   Created: 2024/11/06 12:30:12 by dvlachos          #+#    #+#             */
+/*   Updated: 2025/01/13 11:55:54 by dvlachos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,31 +32,29 @@ static int	digit_count(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+int	prnum(int n)
 {
-	char	*result;
-	int		digits;
-	int		nb;
+	int		check;
+	char	s;
+	int		i;
 
-	nb = n;
+	i = 0;
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	digits = digit_count(n);
-	result = malloc(digits + 1);
-	if (result == NULL)
-		return (NULL);
-	result[digits] = '\0';
-	if (n == 0)
-		result[0] = '0';
+		return (write(1, "-2147483648", 11));
 	if (n < 0)
 	{
-		result[0] = '-';
-		nb = -nb;
+		i += write(1, "-", 1);
+		n = -n;
 	}
-	while (nb > 0)
+	if (n > 9)
 	{
-		result[--digits] = '0' + nb % 10;
-		nb = nb / 10;
+		check = prnum(n / 10);
+		if (check == -1)
+			return (-1);
 	}
-	return (result);
+	s = '0' + n % 10;
+	check = write(1, &s, 1);
+	if (check == -1)
+		return (-1);
+	return (i += digit_count(n));
 }
