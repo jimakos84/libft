@@ -31,30 +31,59 @@ static int	wordcount(const char *str, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_array(char	**array, int len)
 {
-	char	**array;
+	while (len--)
+	{
+		free(*array);
+		*array = NULL;
+		*array--;
+	}
+}
+
+
+static void	_split(char **array, char const *s, char c)
+{
 	size_t	len;
 	int		i;
 
-	array = (char **)malloc((wordcount(s, c) + 1) * sizeof(char *));
-	if (!array || !s)
-		return (NULL);
 	i = 0;
 	while (*s)
-	{	
+	{
 		while (*s == c && *s)
 			s++;
 		if (*s)
-		{	
+		{
 			if (!ft_strchr(s, c))
 				len = ft_strlen(s);
 			else
 				len = ft_strchr(s, c) - s;
-			array[i++] = ft_substr(s, 0, len);
+			array[i] = ft_substr(s, 0, len);
+			if (!array[i])
+			{
+				free_array(array, i);
+				return ;
+			}
 			s += len;
+			i++;
 		}
 	}
 	array[i] = NULL;
+}
+
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+
+	array = (char **)malloc((wordcount(s, c) + 1) * sizeof(char *));
+	if (!array || !s)
+		return (NULL);
+	_split(array, s, c);
+	if (*array == NULL)
+	{
+		free(array);
+		array = NULL;
+	}
 	return (array);
 }
